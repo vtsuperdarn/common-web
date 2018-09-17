@@ -9,9 +9,17 @@ app = Flask(__name__)
 def starter():
     return render_template('index.html')
 
-@app.route("/histindexpage")
-def generate_base_page():
-    return render_template('hist_sctr.html')    
+@app.route("/rt_display")
+def generate_rt_display_page():
+    return render_template('rt_display.html')  
+
+@app.route("/rt_conv")
+def generate_rt_conv_page():
+    return render_template('rt_conv.html')        
+
+@app.route("/rt_dscvr")
+def generate_rt_dscvr_page():
+    return render_template('rt_dscvr.html')  
 
 if __name__ == "__main__":
     app.debug=True
